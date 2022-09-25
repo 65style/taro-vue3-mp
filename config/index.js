@@ -1,5 +1,8 @@
 const path = require('path')
 const config = {
+  alias: {
+    '@': path.resolve(__dirname, '..', 'src')
+  },
   projectName: 'taro-vue3-mp',
   date: '2022-9-25',
   designWidth: 375,
@@ -10,8 +13,8 @@ const config = {
     375: 2 / 1
   },
   sourceRoot: 'src',
-  outputRoot: 'dist',
-  plugins: ['@tarojs/plugin-html'],
+  outputRoot: `dist/${process.env.TARO_ENV}`,
+  plugins: ['@tarojs/plugin-html', 'taro-plugin-pinia'],
   defineConstants: {},
   copy: {
     patterns: [],
