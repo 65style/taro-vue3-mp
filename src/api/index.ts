@@ -1,5 +1,5 @@
 import request from '@/utils/request'
-import { mockUrl } from './url'
+import { baseUrl } from './url'
 
 interface IPerson {
   name: string
@@ -7,15 +7,15 @@ interface IPerson {
   avatar: string
 }
 export const getTest = async () => {
-  return await request<IPerson[]>({ url: `${mockUrl}/success` })
+  return await request<IPerson[]>({ url: `${baseUrl}/success` })
 }
 
 export const getError = async () => {
-  return await request<IPerson[]>({ url: `${mockUrl}/success-message` })
+  return await request<IPerson[]>({ url: `${baseUrl}/success-message` })
 }
 
 export const getFail = async () => {
-  return await request<IPerson[]>({ url: `${mockUrl}/error` })
+  return await request<IPerson[]>({ url: `${baseUrl}/error` })
 }
 
 export const getEmpty = async () => {
