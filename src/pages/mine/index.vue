@@ -3,7 +3,7 @@
     <user-info />
   </main>
   <main v-else>
-    <nut-button type="primary" @click="handleLogin">微信一键登录</nut-button>
+    <nut-button type="primary" @click="handleLogin">微信一键登录12</nut-button>
   </main>
 </template>
 
